@@ -6,7 +6,16 @@
 /*   By: csakamot <csakamot@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/01 14:21:20 by csakamot          #+#    #+#             */
-/*   Updated: 2024/02/19 16:40:13 by csakamot         ###   ########.fr       */
+/*   Updated: 2024/02/19 17:34:18 by csakamot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "Zombie.hpp"
+
+Zombie::Zombie(/* args */)
+{
+}
+
+Zombie::~Zombie()
+{
+}
