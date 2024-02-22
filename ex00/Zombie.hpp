@@ -6,7 +6,7 @@
 /*   By: csakamot <csakamot@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/01 14:21:20 by csakamot          #+#    #+#             */
-/*   Updated: 2024/02/19 17:34:03 by csakamot         ###   ########.fr       */
+/*   Updated: 2024/02/22 14:05:25 by csakamot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,24 @@
 #ifndef ZOMBIE_H
 #define ZOMBIE_H
 
+#define MEOW "BraiiiiiiinnnzzzZ..."
+
+#include <iostream>
+#include <cstdlib>
+
 class Zombie
 {
 private:
-	/* data */
+	Zombie*		newZombieptr;
+	std::string	name;
+
 public:
-	Zombie(/* args */);
+	Zombie( const std::string& name );
 	~Zombie();
+
+	void	announce( void );
+	Zombie*	newZombie( std::string name );
+	void	randomChump( std::string name );
 };
 
 #endif

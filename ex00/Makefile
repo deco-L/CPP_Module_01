@@ -6,12 +6,12 @@
 #    By: csakamot <csakamot@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/01 14:21:20 by csakamot          #+#    #+#              #
-#    Updated: 2024/02/19 17:35:24 by csakamot         ###   ########.fr        #
+#    Updated: 2024/02/22 14:13:26 by csakamot         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 ##----Executable File Name-----##
-NAME			= account
+NAME			= zombie
 ##-----------------------------##
 
 ##-----Directory Location------##
@@ -23,7 +23,7 @@ OBJDIR			= objs/
 ##-----------------------------##
 
 ##------------Srcs-------------##
-MAINSRC			= Account.cpp tests.cpp
+MAINSRC			= main.cpp Zombie.cpp newZombie.cpp randomChump.cpp
 
 SRCS			= $(addprefix $(SRCDIR), ${MAINSRC})
 ##-----------------------------##
