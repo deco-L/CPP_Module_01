@@ -6,7 +6,7 @@
 /*   By: csakamot <csakamot@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/01 14:21:20 by csakamot          #+#    #+#             */
-/*   Updated: 2024/02/22 23:28:03 by csakamot         ###   ########.fr       */
+/*   Updated: 2024/02/22 23:38:55 by csakamot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,10 @@ static void	draw_terminal_line() {
 static void	console_in_error_process(std::string error) {
 	std::cin.clear();
 	std::cin.ignore( std::numeric_limits<std::streamsize>::max(), '\n' );
-	std::cout << error << std::endl;
+	std::cout	<< ERROR
+				<< std::endl
+				<< error
+				<< std::endl;
 	return ;
 }
 

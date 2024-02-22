@@ -6,7 +6,7 @@
 /*   By: csakamot <csakamot@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/01 14:21:20 by csakamot          #+#    #+#             */
-/*   Updated: 2024/02/22 23:26:06 by csakamot         ###   ########.fr       */
+/*   Updated: 2024/02/22 23:38:42 by csakamot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,9 @@
 #define BYE			"Bye~"
 #define HOWMANY		"How many zombies?"
 #define NAME		"What is the name of the zombie?"
-#define NUMBER_ERR	"Error Invalid number"
-#define NAME_ERR	"Error Invalid name"
+#define ERROR		"\033[31mError\033[m"
+#define NUMBER_ERR	"Invalid number"
+#define NAME_ERR	"Invalid name"
 
 #include <sys/ioctl.h>
 #include <unistd.h>
