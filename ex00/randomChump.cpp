@@ -6,16 +6,15 @@
 /*   By: csakamot <csakamot@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/01 14:21:20 by csakamot          #+#    #+#             */
-/*   Updated: 2024/02/21 19:20:50 by csakamot         ###   ########.fr       */
+/*   Updated: 2024/02/22 15:58:37 by csakamot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
 void	Zombie::randomChump( std::string name ) {
-	Zombie*	newZombie;
+	Zombie	newZombie(name);
 
-	newZombie = new Zombie(name);
-	newZombie->announce();
+	newZombie.announce();
 	return ;
 }
