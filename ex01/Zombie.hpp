@@ -6,7 +6,7 @@
 /*   By: csakamot <csakamot@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/01 14:21:20 by csakamot          #+#    #+#             */
-/*   Updated: 2024/02/22 16:07:34 by csakamot         ###   ########.fr       */
+/*   Updated: 2024/02/22 21:24:12 by csakamot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,22 +14,19 @@
 #ifndef ZOMBIE_H
 #define ZOMBIE_H
 
+#include <iostream>
+#include <cstdlib>
+
 class Zombie
 {
 private:
-	/* data */
+	std::string	name;
+
 public:
-	Zombie(/* args */);
+	Zombie(const std::string &name);
 	~Zombie();
+
+	Zombie*	zombieHorde( int N, std::string name );
 };
-
-Zombie::Zombie(/* args */)
-{
-}
-
-Zombie::~Zombie()
-{
-}
-
 
 #endif
