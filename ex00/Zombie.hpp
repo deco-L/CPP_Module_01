@@ -6,7 +6,7 @@
 /*   By: csakamot <csakamot@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/01 14:21:20 by csakamot          #+#    #+#             */
-/*   Updated: 2024/02/22 16:02:07 by csakamot         ###   ########.fr       */
+/*   Updated: 2024/02/22 21:51:36 by csakamot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,8 @@
 #ifndef ZOMBIE_H
 #define ZOMBIE_H
 
-#define MEOW "BraiiiiiiinnnzzzZ..."
+#define MEOW	"BraiiiiiiinnnzzzZ..."
+#define BYE		"Bye~"
 
 #include <iostream>
 #include <cstdlib>

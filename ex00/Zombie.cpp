@@ -6,7 +6,7 @@
 /*   By: csakamot <csakamot@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/01 14:21:20 by csakamot          #+#    #+#             */
-/*   Updated: 2024/02/22 15:55:11 by csakamot         ###   ########.fr       */
+/*   Updated: 2024/02/22 21:51:43 by csakamot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ Zombie::Zombie( const std::string& name ) :
 Zombie::~Zombie() {
 	std::cout	<< name
 				<< ": "
-				<< "Bye~"
+				<< BYE
 				<< std::endl;
 }
 
