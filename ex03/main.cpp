@@ -6,22 +6,24 @@
 /*   By: csakamot <csakamot@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/01 14:21:20 by csakamot          #+#    #+#             */
-/*   Updated: 2024/03/07 14:11:20 by csakamot         ###   ########.fr       */
+/*   Updated: 2024/03/07 17:23:54 by csakamot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "HumanA.hpp"
+#include "HumanB.hpp"
 #include <sys/ioctl.h>
 #include <unistd.h>
 #include <cstdlib>
 #include <iostream>
 
-static size_t	get_term_line() {
+static size_t get_term_line() {
 	winsize	terminal_size;
 	ioctl(STDOUT_FILENO, TIOCGWINSZ, &terminal_size);
 	return (terminal_size.ws_col);
 }
 
-static void	draw_terminal_line() {
+static void draw_terminal_line() {
 	size_t	terminal_col;
 
 	terminal_col = get_term_line();
@@ -31,6 +33,16 @@ static void	draw_terminal_line() {
 	return ;
 }
 
-int	main() {
+int main() {
+	Weapon club = Weapon("crude spiked club");
+
+	draw_terminal_line();
+	HumanA bob("Bob", club);
+	bob.attack();
+	club.setType("some other type of club");
+	std::cout << &club << std::endl;
+	bob.view_address();
+	bob.attack();
+	draw_terminal_line();
 	return (EXIT_SUCCESS);
 }

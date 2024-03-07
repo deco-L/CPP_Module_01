@@ -6,7 +6,7 @@
 /*   By: csakamot <csakamot@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/01 14:21:20 by csakamot          #+#    #+#             */
-/*   Updated: 2024/03/07 14:13:01 by csakamot         ###   ########.fr       */
+/*   Updated: 2024/03/07 16:10:23 by csakamot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ private:
 
 public:
 	Zombie() {};
-	Zombie(const std::string &name);
+	Zombie( const std::string &name );
 	~Zombie();
 
 	void			announce( void );

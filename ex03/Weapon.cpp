@@ -6,7 +6,7 @@
 /*   By: csakamot <csakamot@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/01 14:21:20 by csakamot          #+#    #+#             */
-/*   Updated: 2024/03/07 15:44:58 by csakamot         ###   ########.fr       */
+/*   Updated: 2024/03/07 16:36:53 by csakamot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,18 @@ Weapon::Weapon(const std::string& type) :
 Weapon::~Weapon() {};
 
 const std::string Weapon::getType() {
+	std::cout	<< "This weapon is a "
+				<< type
+				<< '.' << std::endl;
 	return (type);
 }
 
-void Weapon::setType(const std::string& newtype) {
-	type = newtype;
+void Weapon::setType(const std::string& new_type) {
+	type = new_type;
+	std::cout	<< "This weapon has changed from a "
+				<< type
+				<< "to a "
+				<< new_type
+				<< '.' << std::endl;
 	return ;
 }
