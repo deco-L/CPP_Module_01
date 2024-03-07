@@ -6,7 +6,8 @@
 /*   By: csakamot <csakamot@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/01 14:21:20 by csakamot          #+#    #+#             */
-/*   Updated: 2024/02/19 16:44:29 by csakamot         ###   ########.fr       */
+/*   Updated: 2024/03/07 14:28:41 by csakamot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "HumanB.hpp"

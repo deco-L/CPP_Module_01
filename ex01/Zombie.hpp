@@ -6,13 +6,13 @@
 /*   By: csakamot <csakamot@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/01 14:21:20 by csakamot          #+#    #+#             */
-/*   Updated: 2024/02/22 23:38:42 by csakamot         ###   ########.fr       */
+/*   Updated: 2024/03/07 14:13:01 by csakamot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
-#ifndef ZOMBIE_H
-#define ZOMBIE_H
+#ifndef ZOMBIE_HPP
+#define ZOMBIE_HPP
 
 #define MEOW		"BraiiiiiiinnnzzzZ..."
 #define BYE			"Bye~"

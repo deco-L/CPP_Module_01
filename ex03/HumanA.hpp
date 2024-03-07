@@ -6,7 +6,15 @@
 /*   By: csakamot <csakamot@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/01 14:21:20 by csakamot          #+#    #+#             */
-/*   Updated: 2024/02/19 16:44:27 by csakamot         ###   ########.fr       */
+/*   Updated: 2024/03/07 15:46:04 by csakamot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#pragma once
+#ifndef HUMANA_H
+
+class HumanA {
+
+};
+
+#endif
