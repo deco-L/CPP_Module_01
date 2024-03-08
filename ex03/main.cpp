@@ -6,7 +6,7 @@
 /*   By: csakamot <csakamot@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/01 14:21:20 by csakamot          #+#    #+#             */
-/*   Updated: 2024/03/08 21:30:21 by csakamot         ###   ########.fr       */
+/*   Updated: 2024/03/09 01:39:03 by csakamot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,15 +34,26 @@ static void draw_terminal_line() {
 }
 
 int main() {
-	Weapon club = Weapon("crude spiked club");
+	{
+		draw_terminal_line();
+		Weapon club = Weapon("crude spiked club");
+		HumanA bob("Bob", club);
 
-	draw_terminal_line();
-	HumanA bob("Bob", club);
-	bob.attack();
-	club.setType("some other type of club");
-	std::cout << &club << std::endl;
-	bob.view_address();
-	bob.attack();
-	draw_terminal_line();
+		bob.attack();
+		club.setType("some other type of club");
+		bob.attack();
+		draw_terminal_line();
+	}
+	{
+		draw_terminal_line();
+		Weapon club = Weapon("crude spiked club");
+		HumanB jim("Jim");
+
+		jim.setWeapon(club);
+		jim.attack();
+		club.setType("some other type of club");
+		jim.attack();
+		draw_terminal_line();
+	}
 	return (EXIT_SUCCESS);
 }
