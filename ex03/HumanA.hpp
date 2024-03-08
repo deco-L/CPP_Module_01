@@ -6,7 +6,7 @@
 /*   By: csakamot <csakamot@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/01 14:21:20 by csakamot          #+#    #+#             */
-/*   Updated: 2024/03/07 17:20:32 by csakamot         ###   ########.fr       */
+/*   Updated: 2024/03/08 21:26:45 by csakamot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ private:
 	Weapon		weapon;
 
 public:
-	HumanA( const std::string name, Weapon weapon );
+	HumanA( const std::string name, Weapon* weapon );
 	~HumanA( void );
 
 	void	attack( void );
