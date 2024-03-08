@@ -6,29 +6,29 @@
 /*   By: csakamot <csakamot@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/01 14:21:20 by csakamot          #+#    #+#             */
-/*   Updated: 2024/03/08 21:26:59 by csakamot         ###   ########.fr       */
+/*   Updated: 2024/03/08 21:41:10 by csakamot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "HumanA.hpp"
 
-HumanA::HumanA(const std::string name, Weapon* weapon) :
+HumanA::HumanA(const std::string name, Weapon& newweapon) :
 	name(name),
-	weapon(*weapon) {}
+	weapon(&newweapon) {}
 
 HumanA::~HumanA() {};
 
 void HumanA::attack() {
 	std::cout	<< name
 				<< " attacks with their "
-				<< weapon.getType()
+				<< weapon->getType()
 				<< '.' << std::endl;
 	return ;
 }
 
 void HumanA::view_address() {
 	std::cout	<< &name << ": " << name << std::endl
-				<< &weapon << ": " << weapon.getType()
+				<< &weapon << ": " << weapon->getType()
 				<< std::endl;
 	return ;
 }

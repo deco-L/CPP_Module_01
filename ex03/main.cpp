@@ -6,7 +6,7 @@
 /*   By: csakamot <csakamot@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/01 14:21:20 by csakamot          #+#    #+#             */
-/*   Updated: 2024/03/08 21:27:11 by csakamot         ###   ########.fr       */
+/*   Updated: 2024/03/08 21:30:21 by csakamot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ int main() {
 	Weapon club = Weapon("crude spiked club");
 
 	draw_terminal_line();
-	HumanA bob("Bob", &club);
+	HumanA bob("Bob", club);
 	bob.attack();
 	club.setType("some other type of club");
 	std::cout << &club << std::endl;
