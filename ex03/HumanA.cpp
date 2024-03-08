@@ -6,7 +6,7 @@
 /*   By: csakamot <csakamot@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/01 14:21:20 by csakamot          #+#    #+#             */
-/*   Updated: 2024/03/09 01:42:40 by csakamot         ###   ########.fr       */
+/*   Updated: 2024/03/09 01:49:07 by csakamot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,12 +32,5 @@ void HumanA::attack() {
 				<< " attacks with their "
 				<< weapon->getType()
 				<< '.' << std::endl;
-	return ;
-}
-
-void HumanA::view_address() {
-	std::cout	<< &name << ": " << name << std::endl
-				<< &weapon << ": " << weapon->getType()
-				<< std::endl;
 	return ;
 }
