@@ -6,7 +6,7 @@
 /*   By: csakamot <csakamot@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/01 14:21:20 by csakamot          #+#    #+#             */
-/*   Updated: 2024/03/09 01:47:47 by csakamot         ###   ########.fr       */
+/*   Updated: 2024/03/09 02:37:06 by csakamot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,11 +36,11 @@ static void draw_terminal_line() {
 int main() {
 	{
 		draw_terminal_line();
+		std::cout	<< "\e[1;30;46m In the case of HumanA \e[0m"
+					<< std::endl;
 		Weapon club = Weapon("crude spiked club");
 		HumanA bob("Bob", club);
 
-		std::cout << &club << std::endl;
-		bob.view_address();
 		bob.attack();
 		club.setType("some other type of club");
 		bob.attack();
@@ -48,6 +48,8 @@ int main() {
 	}
 	{
 		draw_terminal_line();
+		std::cout	<< "\e[1;30;46m In the case of HumanB \e[0m"
+					<< std::endl;
 		Weapon club = Weapon("crude spiked club");
 		HumanB jim("Jim");
 
@@ -55,6 +57,14 @@ int main() {
 		jim.attack();
 		club.setType("some other type of club");
 		jim.attack();
+		draw_terminal_line();
+	}
+	{
+		draw_terminal_line();
+		std::cout	<< "\e[1;30;46m In the case of null \e[0m"
+					<< std::endl;
+
+		Weapon club("");
 		draw_terminal_line();
 	}
 	return (EXIT_SUCCESS);

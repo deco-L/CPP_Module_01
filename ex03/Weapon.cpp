@@ -6,14 +6,21 @@
 /*   By: csakamot <csakamot@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/01 14:21:20 by csakamot          #+#    #+#             */
-/*   Updated: 2024/03/09 01:45:18 by csakamot         ###   ########.fr       */
+/*   Updated: 2024/03/09 02:39:47 by csakamot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Weapon.hpp"
 
-Weapon::Weapon(const std::string& type) :
-	type(type) {}
+Weapon::Weapon(const std::string& init_type) {
+	if (init_type.empty()) {
+		std::cerr	<< "\e[1;31m Error: empty string\e[0m"
+					<< std::endl;
+		exit(EXIT_FAILURE);
+	}
+	else
+		type = init_type;
+}
 
 Weapon::~Weapon() {
 	std::cout	<< type
