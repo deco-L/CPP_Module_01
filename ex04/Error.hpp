@@ -6,7 +6,7 @@
 /*   By: csakamot <csakamot@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/01 14:21:20 by csakamot          #+#    #+#             */
-/*   Updated: 2024/03/11 17:52:11 by csakamot         ###   ########.fr       */
+/*   Updated: 2024/03/12 03:30:31 by csakamot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 #ifndef ERROR_H
 #define ERROR_H
 
+#include <cstdlib>
 #include <iostream>
 
 class Error {
@@ -22,6 +23,7 @@ public:
 	~Error( void ) {}
 
 	static void	argument_number( int nbr, std::string name );
+	static void file_open( void );
 };
 
 #endif

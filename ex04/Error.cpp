@@ -6,7 +6,7 @@
 /*   By: csakamot <csakamot@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/01 14:21:20 by csakamot          #+#    #+#             */
-/*   Updated: 2024/03/11 17:55:18 by csakamot         ###   ########.fr       */
+/*   Updated: 2024/03/12 03:30:02 by csakamot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,5 +18,13 @@ void Error::argument_number(int nbr, std::string name) {
 					<< name
 					<< "<filename> <string1> <string2>\e[0m"
 					<< std::endl;
+		exit(EXIT_FAILURE);
 	}
+	return ;
+}
+
+void Error::file_open() {
+	std::cerr	<< "\e[1;31m Error: Not open file"
+				<< std::endl;
+	exit(EXIT_FAILURE);
 }
