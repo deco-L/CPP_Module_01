@@ -6,7 +6,7 @@
 /*   By: csakamot <csakamot@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/01 14:21:20 by csakamot          #+#    #+#             */
-/*   Updated: 2024/03/09 02:37:06 by csakamot         ###   ########.fr       */
+/*   Updated: 2024/03/11 16:40:30 by csakamot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,23 @@ int main() {
 		std::cout	<< "\e[1;30;46m In the case of null \e[0m"
 					<< std::endl;
 
+		Weapon sword("amazingly sharp sword");
 		Weapon club("");
+		HumanA noname("", sword);
+		HumanA tmpA("TmpA", club);
+		HumanB tmpB("TmpB");
+		HumanB noname2("");
+
+		tmpA.attack();
+		tmpB.attack();
+		noname.attack();
+		noname2.attack();
+		tmpB.setWeapon(club);
+		club.setType("lump of iron");
+		tmpA.attack();
+		tmpB.attack();
+		club.setType("crude spiked club");
+		tmpB.attack();
 		draw_terminal_line();
 	}
 	return (EXIT_SUCCESS);
