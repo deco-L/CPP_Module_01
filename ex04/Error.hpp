@@ -1,20 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Error.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: csakamot <csakamot@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/01 14:21:20 by csakamot          #+#    #+#             */
-/*   Updated: 2024/03/11 17:54:45 by csakamot         ###   ########.fr       */
+/*   Updated: 2024/03/11 17:52:11 by csakamot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Replace.hpp"
-#include "Error.hpp"
-#include <cstdlib>
+#pragma once
+#ifndef ERROR_H
+#define ERROR_H
 
-int main(int argc, char** argv) {
-	Error::argument_number(argc, argv[0]);
-	return (EXIT_SUCCESS);
-}
+#include <iostream>
+
+class Error {
+public:
+	Error( void ) {}
+	~Error( void ) {}
+
+	static void	argument_number( int nbr, std::string name );
+};
+
+#endif
