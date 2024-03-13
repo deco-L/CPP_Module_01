@@ -6,7 +6,7 @@
 #    By: csakamot <csakamot@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/01 14:21:20 by csakamot          #+#    #+#              #
-#    Updated: 2024/03/11 17:53:22 by csakamot         ###   ########.fr        #
+#    Updated: 2024/03/12 13:44:55 by csakamot         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,7 +23,7 @@ OBJDIR			= objs/
 ##-----------------------------##
 
 ##------------Srcs-------------##
-MAINSRC			=	main.cpp Replace.cpp Error.cpp
+MAINSRC			=	main.cpp Replace.cpp Error.cpp File.cpp
 
 SRCS			= $(addprefix $(SRCDIR), ${MAINSRC})
 ##-----------------------------##
