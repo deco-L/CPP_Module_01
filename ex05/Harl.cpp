@@ -6,7 +6,7 @@
 /*   By: csakamot <csakamot@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/01 14:21:20 by csakamot          #+#    #+#             */
-/*   Updated: 2024/03/16 16:20:49 by csakamot         ###   ########.fr       */
+/*   Updated: 2024/03/16 16:31:39 by csakamot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ void Harl::complain(std::string level) {
     std::map<std::string,
 	void (Harl::*)()>::iterator it = function_map.find(level);
     if (it != function_map.end()) {
-        (this->*(it->second))();
+        (this->*it->second)();
     } else {
         std::cerr << "Unknown level: " << level << std::endl;
     }

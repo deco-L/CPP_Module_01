@@ -6,7 +6,13 @@
 /*   By: csakamot <csakamot@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/01 14:21:20 by csakamot          #+#    #+#             */
-/*   Updated: 2024/02/19 16:46:39 by csakamot         ###   ########.fr       */
+/*   Updated: 2024/03/16 16:25:35 by csakamot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "Harl.hpp"
+#include <cstdlib>
+
+int main() {
+	return (EXIT_SUCCESS);
+}
