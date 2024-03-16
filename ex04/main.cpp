@@ -6,7 +6,7 @@
 /*   By: csakamot <csakamot@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/01 14:21:20 by csakamot          #+#    #+#             */
-/*   Updated: 2024/03/13 18:09:35 by csakamot         ###   ########.fr       */
+/*   Updated: 2024/03/16 13:28:12 by csakamot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 #include "Error.hpp"
 #include <cstdlib>
 #include <fstream>
+#include <iostream>
 
 int main(int argc, char** argv) {
 	char	buff;
