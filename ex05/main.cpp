@@ -6,7 +6,7 @@
 /*   By: csakamot <csakamot@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/01 14:21:20 by csakamot          #+#    #+#             */
-/*   Updated: 2024/03/16 16:20:00 by csakamot         ###   ########.fr       */
+/*   Updated: 2024/03/16 18:11:02 by csakamot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,10 +37,20 @@ int main() {
 	draw_terminal_line();
 	std::cout	<< "\e[1;32m Harl program \e[0m"
 				<< std::endl;
+	std::cout	<< "\e[1;93m DEBUG \e[0m"
+				<< std::endl;
+	harl.complain("DEBUG");
+	std::cout	<< "\e[1;93m INFO \e[0m"
+				<< std::endl;
 	harl.complain("INFO");
-	harl.complain("INFO");
+	std::cout	<< "\e[1;93m WARNING \e[0m"
+				<< std::endl;
 	harl.complain("WARNING");
+	std::cout	<< "\e[1;93m ERROR \e[0m"
+				<< std::endl;
 	harl.complain("ERROR");
+	std::cout	<< "\e[1;93m invalid level \e[0m"
+				<< std::endl;
 	harl.complain("");
 	harl.complain("aaa");
 	draw_terminal_line();
