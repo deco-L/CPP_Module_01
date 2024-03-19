@@ -6,12 +6,12 @@
 #    By: csakamot <csakamot@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/01 14:21:20 by csakamot          #+#    #+#              #
-#    Updated: 2024/03/16 16:25:07 by csakamot         ###   ########.fr        #
+#    Updated: 2024/03/18 16:42:59 by csakamot         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 ##----Executable File Name-----##
-NAME			= harl_filter
+NAME			= harlFilter
 ##-----------------------------##
 
 ##-----Directory Location------##

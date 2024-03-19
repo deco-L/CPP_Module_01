@@ -6,15 +6,34 @@
 /*   By: csakamot <csakamot@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/01 14:21:20 by csakamot          #+#    #+#             */
-/*   Updated: 2024/03/16 16:26:20 by csakamot         ###   ########.fr       */
+/*   Updated: 2024/03/19 16:20:00 by csakamot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
-#ifndef HARL_H
-#define HARL_H
+#ifndef HARL_HPP
+
+#include <functional>
+#include <map>
+#include <string>
+#include <vector>
+#include <iostream>
 
 class Harl {
+private:
+	void						debug( void );
+	void						info( void );
+	void						warning( void );
+	void						error( void );
+	std::vector<std::string>	key;
+	std::map<std::string, void (Harl::*)()> function_map;
+
+public:
+	Harl( void );
+	~Harl( void ) {}
+
+	void	complain( std::string level );
+	void	filter( std::string level );
 };
 
 #endif
