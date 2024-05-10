@@ -10,9 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#pragma once
-#ifndef ERROR_H
-#define ERROR_H
+#ifndef ERROR_HPP
+#define ERROR_HPP
 
 #include <cstdlib>
 #include <iostream>

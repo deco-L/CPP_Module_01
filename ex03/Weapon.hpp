@@ -10,9 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#pragma once
-#ifndef WEAPON_H
-#define WEAPON_H
+#ifndef WEAPON_HPP
+#define WEAPON_HPP
 
 #include <cstdlib>
 #include <iostream>

@@ -10,9 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#pragma once
-#ifndef REPLACE_H
-#define REPLACE_H
+#ifndef REPLACE_HPP
+#define REPLACE_HPP
 
 #include <string.h>
 #include "File.hpp"

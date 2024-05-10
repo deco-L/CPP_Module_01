@@ -10,8 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#pragma once
-#ifndef HUMANB_H
+#ifndef HUMANB_HPP
+#define HUMANB_HPP
 
 #include "Weapon.hpp"
 #include <iostream>
