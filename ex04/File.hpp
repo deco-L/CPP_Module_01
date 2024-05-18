@@ -1,32 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   HumanA.hpp                                         :+:      :+:    :+:   */
+/*   File.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: csakamot <csakamot@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/01 14:21:20 by csakamot          #+#    #+#             */
-/*   Updated: 2024/05/18 14:59:16 by csakamot         ###   ########.fr       */
+/*   Updated: 2024/05/18 14:59:36 by csakamot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef HUMANA_HPP
-#define HUMANA_HPP
+#pragma once
+#ifndef FILE_H
+#define FILE_H
 
-#include "Weapon.hpp"
+#include <fstream>
 #include <iostream>
 
-class HumanA
+class File
 {
 private:
-	std::string	name;
-	Weapon*		weapon;
+	char*			file_name;
+	std::ifstream	input;
+	std::ofstream	out;
 
 public:
-	HumanA( const std::string& init_name, Weapon& init_weapon );
-	~HumanA( void );
+	File( char* init_name);
+	~File( void );
 
-	void	attack( void );
+	bool			input_open( void );
+	bool			output_open( void );
+	void			file_close();
+	std::ifstream&	get_input( void );
+	std::ofstream&	get_output( void );
 };
 
 #endif

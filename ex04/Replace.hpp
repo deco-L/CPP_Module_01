@@ -6,7 +6,7 @@
 /*   By: csakamot <csakamot@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/01 14:21:20 by csakamot          #+#    #+#             */
-/*   Updated: 2024/03/13 17:45:12 by csakamot         ###   ########.fr       */
+/*   Updated: 2024/05/18 14:59:41 by csakamot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,8 @@
 #include <string.h>
 #include "File.hpp"
 
-class Replace {
+class Replace
+{
 public:
 	static void stream_editor( File& file, char* s1, char* s2 );
 };

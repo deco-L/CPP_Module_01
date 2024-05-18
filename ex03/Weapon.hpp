@@ -6,7 +6,7 @@
 /*   By: csakamot <csakamot@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/01 14:21:20 by csakamot          #+#    #+#             */
-/*   Updated: 2024/03/09 02:40:24 by csakamot         ###   ########.fr       */
+/*   Updated: 2024/05/18 14:59:27 by csakamot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,8 @@
 #include <cstdlib>
 #include <iostream>
 
-class Weapon {
+class Weapon
+{
 private:
 	std::string type;
 
