@@ -6,7 +6,7 @@
 /*   By: csakamot <csakamot@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/01 14:21:20 by csakamot          #+#    #+#             */
-/*   Updated: 2024/03/11 16:38:30 by csakamot         ###   ########.fr       */
+/*   Updated: 2024/05/18 16:38:19 by csakamot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,8 +41,11 @@ HumanA::~HumanA() {
 };
 
 void HumanA::attack() {
-	if (name.empty())
+	if (name.empty()) {
+    std::cerr	<< "\e[1;31m Error: empty name\e[0m"
+              << std::endl;
 		return ;
+  }
 	if (weapon->getType().empty()) {
 		std::cout	<< name
 					<< " attacks with their "

@@ -6,7 +6,7 @@
 /*   By: csakamot <csakamot@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/01 14:21:20 by csakamot          #+#    #+#             */
-/*   Updated: 2024/02/22 23:38:55 by csakamot         ###   ########.fr       */
+/*   Updated: 2024/05/18 15:09:15 by csakamot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,12 @@ int	main() {
 	draw_terminal_line();
 	if (std::cin.fail())
 		return (console_in_error_process(NUMBER_ERR), EXIT_FAILURE);
+  if (number < 1) {
+    std::cout << ERROR << std::endl
+              << "Invalid number." << std::endl;
+    return (EXIT_FAILURE);
+  }
+
 	draw_terminal_line();
 	std::cout	<< NAME
 				<< std::endl;
@@ -61,5 +67,6 @@ int	main() {
 	for (int index = 0; index < number; index++)
 		Horde[index].announce();
 	delete[] Horde;
+  draw_terminal_line();
 	return (EXIT_SUCCESS);
 }

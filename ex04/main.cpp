@@ -6,7 +6,7 @@
 /*   By: csakamot <csakamot@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/01 14:21:20 by csakamot          #+#    #+#             */
-/*   Updated: 2024/03/16 13:28:12 by csakamot         ###   ########.fr       */
+/*   Updated: 2024/05/18 16:45:24 by csakamot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,9 @@
 
 int main(int argc, char** argv) {
 	char	buff;
-	File	file(argv[1]);
 
 	Error::argument_number(argc, argv[0]);
+	File	file(argv[1]);
 	if (!file.input_open())
 		Error::file_open();
 	if (!file.output_open())
