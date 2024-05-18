@@ -6,7 +6,7 @@
 /*   By: csakamot <csakamot@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/01 14:21:20 by csakamot          #+#    #+#             */
-/*   Updated: 2024/03/19 16:51:31 by csakamot         ###   ########.fr       */
+/*   Updated: 2024/05/18 17:50:57 by csakamot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,21 +81,37 @@ void Harl::complain(std::string level) {
 }
 
 void Harl::filter(std::string level) {
-	std::vector<std::string>::iterator key_it;
-	std::map<std::string,
-	void (Harl::*)()>::iterator it;
+  int index = -1;
+  for (size_t i = 0; i < key.size(); i++) {
+    if (key[i] == level) {
+      index = i;
+      break;
+    }
+  }
 
-	it = function_map.find(level);
-	for (key_it = key.begin(); key_it != key.end(); key_it++)
-		if (*key_it == level)
-			break ;
-	if (it != function_map.end())
-		for (; key_it != key.end(); key_it++) {
-			it =function_map.find(*key_it);
-			(this->*it->second)();
-			std::cout << std::endl;
-		}
-	else
-		std::cerr << "Unknown level: " << level << std::endl;
+  if (index != -1) {
+    switch(index) {
+      case 0:
+        (this->*function_map["DEBUG"])();
+        __attribute__ ((fallthrough));
+
+      case 1:
+        (this->*function_map["INFO"])();
+        __attribute__ ((fallthrough));
+
+      case 2:
+        (this->*function_map["WARNING"])();
+        __attribute__ ((fallthrough));
+
+      case 3:
+        (this->*function_map["ERROR"])();
+        break;
+
+      default:
+        std::cerr << "Unknown level: " << level << std::endl;
+        break;
+    }
+  } else
+    std::cerr << "Unknown level: " << level << std::endl;
 	return ;
 }
