@@ -6,7 +6,7 @@
 /*   By: csakamot <csakamot@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/01 14:21:20 by csakamot          #+#    #+#             */
-/*   Updated: 2024/03/07 16:10:23 by csakamot         ###   ########.fr       */
+/*   Updated: 2024/05/19 13:21:30 by csakamot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,8 +38,10 @@ public:
 	Zombie( const std::string &name );
 	~Zombie();
 
-	void			announce( void );
-	static Zombie*	zombieHorde( int N, std::string name );
+	void  announce( void );
+  void  setName( const std::string& name );
 };
+
+Zombie*	zombieHorde( int N, std::string name );
 
 #endif

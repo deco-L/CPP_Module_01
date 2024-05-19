@@ -6,7 +6,7 @@
 /*   By: csakamot <csakamot@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/01 14:21:20 by csakamot          #+#    #+#             */
-/*   Updated: 2024/05/18 15:09:15 by csakamot         ###   ########.fr       */
+/*   Updated: 2024/05/19 13:23:27 by csakamot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,7 @@ int	main() {
 	draw_terminal_line();
 	if (std::cin.fail())
 		return (console_in_error_process(NAME_ERR), EXIT_FAILURE);
-	Horde = Zombie::zombieHorde( number , name );
+	Horde = zombieHorde( number , name );
 	for (int index = 0; index < number; index++)
 		Horde[index].announce();
 	delete[] Horde;
