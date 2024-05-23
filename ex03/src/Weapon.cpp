@@ -6,7 +6,7 @@
 /*   By: csakamot <csakamot@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/01 14:21:20 by csakamot          #+#    #+#             */
-/*   Updated: 2024/03/11 16:32:01 by csakamot         ###   ########.fr       */
+/*   Updated: 2024/05/23 13:38:50 by csakamot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ Weapon::~Weapon() {
 				<< std::endl;
 };
 
-const std::string Weapon::getType() {
+const std::string& Weapon::getType() {
 	return (type);
 }
 
