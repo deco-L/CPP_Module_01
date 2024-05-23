@@ -6,7 +6,7 @@
 #    By: csakamot <csakamot@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/01 14:21:20 by csakamot          #+#    #+#              #
-#    Updated: 2024/05/23 13:48:59 by csakamot         ###   ########.fr        #
+#    Updated: 2024/05/23 16:22:50 by csakamot         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -52,6 +52,8 @@ WHITE		= \e[38;5;7m
 GREY		= \e[38;5;8m
 SET1		= \e[1;38;5;51m
 RESET		= \e[0m
+SHOW		= \e[?25l
+HIDE		= \e[?25h
 ##-----------------------------##
 
 ##--------set variable---------##
@@ -76,6 +78,7 @@ ${NAME}:${OBJS}
 				@printf "$(SET1) \"88,e8\'  \"88 88\"  888 888 888 888 88\"  888 888  \"YeeP\"  \"88 888 \"8\" \"8\" $(RESET)\n"
 				@printf "$(SET1)                               888                                       $(RESET)\n"
 				@printf "$(SET1)                               888                                       $(RESET)\n"
+				@printf "$(HIDE)"
 				@$(CC) $(CFLAGS) -o $@ $^
 
 $(OBJDIR)%.o:$(SRCDIR)%.cpp
