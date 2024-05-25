@@ -6,7 +6,7 @@
 /*   By: csakamot <csakamot@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/01 14:21:20 by csakamot          #+#    #+#             */
-/*   Updated: 2024/05/18 16:45:24 by csakamot         ###   ########.fr       */
+/*   Updated: 2024/05/25 16:59:52 by csakamot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,21 +18,16 @@
 #include <iostream>
 
 int main(int argc, char** argv) {
-	char	buff;
-
 	Error::argument_number(argc, argv[0]);
 	File	file(argv[1]);
 	if (!file.input_open())
 		Error::file_open();
 	if (!file.output_open())
 		Error::file_open();
-	while (file.get_input().get(buff))
-	{
-		if (argv[2][0] == buff)
-			Replace::stream_editor(file, argv[2], argv[3]);
-		else
-			file.get_output() << buff;
-	}
+
+  const std::string s1 = argv[2];
+  const std::string s2 = argv[3];
+	Replace::stream_editor(file, s1, s2);
 	std::cout	<< "\e[1;30;102m Sucess create "
 				<< argv[1]
 				<< ".replace file\e[0m"

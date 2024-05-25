@@ -6,7 +6,7 @@
 /*   By: csakamot <csakamot@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/01 14:21:20 by csakamot          #+#    #+#             */
-/*   Updated: 2024/03/13 17:25:36 by csakamot         ###   ########.fr       */
+/*   Updated: 2024/05/25 16:50:49 by csakamot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,9 +37,17 @@ File::~File() {
 	}
 };
 
+static bool  is_directory(const char *path) {
+  struct stat status;
+
+  if (stat(path, &status) != 0)
+    return (false);
+  return S_ISDIR(status.st_mode);
+}
+
 bool File::input_open() {
 	input.open(file_name);
-	if (!input)
+	if (!input || is_directory(file_name))
 		return (false);
 	return (true);
 }

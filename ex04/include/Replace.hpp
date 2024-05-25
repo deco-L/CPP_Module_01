@@ -6,7 +6,7 @@
 /*   By: csakamot <csakamot@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/01 14:21:20 by csakamot          #+#    #+#             */
-/*   Updated: 2024/05/18 14:59:41 by csakamot         ###   ########.fr       */
+/*   Updated: 2024/05/25 16:25:20 by csakamot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 class Replace
 {
 public:
-	static void stream_editor( File& file, char* s1, char* s2 );
+	static void stream_editor( File& file, const std::string s1, const std::string s2 );
 };
 
 #endif
